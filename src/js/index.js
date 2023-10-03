@@ -23,7 +23,7 @@ window.onload = () => {
     .then(breeds => {
       Notiflix.Loading.remove();
       const breedSelect = document.querySelector('.breed-select');
-      select = new SlimSelect({
+       new SlimSelect({
         select: breedSelect,
         data: breeds.map(breed => ({
           text: breed.name,
