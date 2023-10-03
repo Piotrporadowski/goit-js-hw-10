@@ -9,7 +9,7 @@ import { fetchBreeds, fetchCatByBreed } from './cat-api';
 
 const catInfo = document.querySelector('.cat-info');
 console.log('Cat info:', catInfo);
-let select;
+
 Notiflix.Loading.standard('Loading...', {
   backgroundColor: 'rgba(0,0,0,0.8)',
 });
@@ -35,8 +35,6 @@ window.onload = () => {
         console.log('onChange event - selected value', event.target.value);
         displayCatInfo(event.target.value);
       });
-      console.log('SlimSelect initialized: ', select);
-      console.log('SlimSelect data: ', select.data.getData());
     })
     .catch(error => {
       Notiflix.Loading.remove();
